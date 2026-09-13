@@ -1,26 +1,420 @@
 <!DOCTYPE html>
-
 <html lang="ja">
 
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta charset="UTF-8">
+<title>GREEN HANDMADE</title>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
 
-  <title>HANDMADE 3D SHOP</title>
+* {
+ box-sizing: border-box;
+}
+
+body {
+ margin: 0;
+ font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+              "Yu Gothic", sans-serif;
+ color: #354236;
+ background: #f4f1e8;
+}
+
+/* ヘッダー */
+
+header {
+ background: #ffffff;
+ padding: 22px 30px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ border-bottom: 1px solid #dfe5dc;
+}
+
+.logo {
+ font-size: 22px;
+ letter-spacing: 3px;
+ font-weight: bold;
+}
+
+nav a {
+ margin-left: 25px;
+ text-decoration: none;
+ color: #526252;
+ font-size: 14px;
+}
+
+/* メインビジュアル */
+
+.hero {
+ min-height: 600px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ padding: 60px 20px;
+
+ background:
+   linear-gradient(rgba(226,235,220,0.75),
+                   rgba(244,241,232,0.85));
+}
+
+.hero-inner {
+ max-width: 700px;
+}
+
+.hero-small {
+ font-size: 13px;
+ letter-spacing: 4px;
+ color: #647564;
+ margin-bottom: 20px;
+}
+
+.hero h1 {
+ font-size: 55px;
+ letter-spacing: 7px;
+ margin: 0 0 20px;
+ color: #304b36;
+}
+
+.hero h2 {
+ font-size: 24px;
+ font-weight: normal;
+ margin-bottom: 20px;
+}
+
+.hero p {
+ line-height: 2;
+ color: #596459;
+}
+
+.button {
+ display: inline-block;
+ margin-top: 25px;
+ padding: 14px 35px;
+ background: #49664d;
+ color: white;
+ text-decoration: none;
+ border-radius: 30px;
+ transition: 0.3s;
+}
+
+.button:hover {
+ background: #304b36;
+}
+
+/* 商品 */
+
+.products {
+ max-width: 1100px;
+ margin: auto;
+ padding: 90px 25px;
+}
+
+.section-title {
+ text-align: center;
+ margin-bottom: 50px;
+}
+
+.section-title small {
+ letter-spacing: 4px;
+ color: #7b8c78;
+}
+
+.section-title h2 {
+ font-size: 30px;
+ margin: 10px 0;
+ color: #354c39;
+}
+
+.product-list {
+ display: grid;
+ grid-template-columns: repeat(3, 1fr);
+ gap: 30px;
+}
+
+.product {
+ background: white;
+ padding: 18px;
+ border-radius: 8px;
+ box-shadow: 0 8px 25px rgba(50,70,50,0.08);
+}
+
+.product-image {
+ height: 280px;
+ background: #dfe7dc;
+ border-radius: 5px;
+
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+ color: #71806e;
+ letter-spacing: 2px;
+}
+
+.product h3 {
+ margin: 20px 0 8px;
+ font-size: 18px;
+}
+
+.product p {
+ color: #707970;
+ font-size: 14px;
+}
+
+.price {
+ font-size: 18px;
+ font-weight: bold;
+ color: #3e5742;
+}
+
+/* 3D */
+
+.three-d {
+ background: #e2eadf;
+ padding: 100px 25px;
+ text-align: center;
+}
+
+.three-d h2 {
+ font-size: 32px;
+ margin-bottom: 20px;
+}
+
+.three-d p {
+ line-height: 2;
+}
+
+/* コンセプト */
+
+.concept {
+ max-width: 800px;
+ margin: auto;
+ padding: 100px 25px;
+ text-align: center;
+}
+
+.concept h2 {
+ font-size: 30px;
+}
+
+.concept p {
+ line-height: 2.2;
+ color: #667066;
+}
+
+/* フッター */
+
+footer {
+ background: #304236;
+ color: white;
+ text-align: center;
+ padding: 40px 20px;
+}
+
+footer p {
+ font-size: 13px;
+ letter-spacing: 2px;
+}
+
+@media (max-width: 700px) {
+
+ header {
+   display: block;
+   text-align: center;
+ }
+
+ nav {
+   margin-top: 15px;
+ }
+
+ nav a {
+   margin: 0 8px;
+ }
+
+ .hero h1 {
+   font-size: 38px;
+ }
+
+ .product-list {
+   grid-template-columns: 1fr;
+ }
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-  <h1>HANDMADE 3D SHOP</h1>
+<header>
 
-  <p>世界にひとつだけのハンドメイド作品</p>
+ <div class="logo">
+   🌿 GREEN HANDMADE
+ </div>
 
-  <h2>作品一覧</h2>
+ <nav>
+   <a href="#products">作品</a>
+   <a href="#3d">3D</a>
+   <a href="#concept">コンセプト</a>
+ </nav>
 
-  <p>ここに商品を掲載します。</p>
+</header>
+
+
+<section class="hero">
+
+ <div class="hero-inner">
+
+   <div class="hero-small">
+     GREEN × HANDMADE × 3D
+   </div>
+
+   <h1>GREEN<br>HANDMADE</h1>
+
+   <h2>暮らしに、ひとつの作品を。</h2>
+
+   <p>
+     植物のある暮らしに似合う、<br>
+     世界にひとつだけのハンドメイド作品。
+   </p>
+
+   <a href="#products" class="button">
+     作品を見る
+   </a>
+
+ </div>
+
+</section>
+
+
+<section class="products" id="products">
+
+ <div class="section-title">
+
+   <small>HANDMADE COLLECTION</small>
+
+   <h2>作品一覧</h2>
+
+ </div>
+
+
+ <div class="product-list">
+
+
+   <div class="product">
+
+     <div class="product-image">
+       PRODUCT IMAGE
+     </div>
+
+     <h3>Handmade Item 01</h3>
+
+     <p>
+       世界にひとつだけのハンドメイド作品。
+     </p>
+
+     <div class="price">
+       ¥5,000
+     </div>
+
+     <a href="#" class="button">
+       3Dで見る
+     </a>
+
+   </div>
+
+
+   <div class="product">
+
+     <div class="product-image">
+       PRODUCT IMAGE
+     </div>
+
+     <h3>Handmade Item 02</h3>
+
+     <p>
+       植物のある暮らしを彩る作品。
+     </p>
+
+     <div class="price">
+       ¥6,000
+     </div>
+
+     <a href="#" class="button">
+       3Dで見る
+     </a>
+
+   </div>
+
+
+   <div class="product">
+
+     <div class="product-image">
+       PRODUCT IMAGE
+     </div>
+
+     <h3>Handmade Item 03</h3>
+
+     <p>
+       丁寧に制作したオリジナル作品。
+     </p>
+
+     <div class="price">
+       ¥7,000
+     </div>
+
+     <a href="#" class="button">
+       3Dで見る
+     </a>
+
+   </div>
+
+
+ </div>
+
+</section>
+
+
+<section class="three-d" id="3d">
+
+ <h2>3D VIEW</h2>
+
+ <p>
+   写真だけでは伝わらない作品の魅力を、<br>
+   360°から楽しめるショップを目指しています。
+ </p>
+
+ <a href="#" class="button">
+   3Dギャラリー
+ </a>
+
+</section>
+
+
+<section class="concept" id="concept">
+
+ <h2>GREEN LIFE</h2>
+
+ <p>
+   植物を育てるように、作品を大切にする。<br>
+   自然を感じる暮らしの中に、<br>
+   ハンドメイドという小さな彩りを。
+ </p>
+
+</section>
+
+
+<footer>
+
+ <p>GREEN HANDMADE</p>
+
+ <p>© 2026 GREEN HANDMADE</p>
+
+</footer>
 
 </body>
 
