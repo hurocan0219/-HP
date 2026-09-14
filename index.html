@@ -553,7 +553,63 @@ header h1::first-letter {
    height: 45px;
  }
 }
+/* ===== 最終デザイン ===== */
 
+.hero {
+background:
+  radial-gradient(circle at 15% 20%, rgba(255,0,170,.35) 0 5px, transparent 6px),
+  radial-gradient(circle at 85% 25%, rgba(0,180,255,.30) 0 5px, transparent 6px),
+  radial-gradient(circle at 20% 80%, rgba(220,255,0,.35) 0 7px, transparent 8px),
+  radial-gradient(circle at 80% 75%, rgba(255,0,170,.25) 0 6px, transparent 7px),
+  linear-gradient(
+    120deg,
+    #fff4c7 0%,
+    #d9ffd0 30%,
+    #d7f7ff 55%,
+    #ffe0f2 80%,
+    #f4ffb0 100%
+  );
+}
+
+/* ネオンの大きなペイント */
+.hero::before {
+content: "";
+position: absolute;
+
+width: 500px;
+height: 90px;
+
+left: -120px;
+top: 130px;
+
+background: #ff29b8;
+
+transform: rotate(-17deg);
+
+opacity: .75;
+
+border-radius: 50%;
+}
+
+/* ブルーのペイント */
+.hero::after {
+content: "";
+position: absolute;
+
+width: 420px;
+height: 80px;
+
+right: -120px;
+bottom: 130px;
+
+background: #00bfff;
+
+transform: rotate(-15deg);
+
+opacity: .70;
+
+border-radius: 50%;
+}
 </style>
 
 </head>
@@ -580,10 +636,10 @@ header h1::first-letter {
  <div class="hero-inner">
 
    <div class="hero-small">
-     GREEN × HANDMADE × 3D
+     VIBRANT × HANDMADE × 3D
    </div>
 
-   <h1>MORI</h1>
+   <h1>MORI.</h1>
 
    <p class="catch-copy">
  植物を置いた。<br>
