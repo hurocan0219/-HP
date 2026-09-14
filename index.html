@@ -29,7 +29,7 @@ body {
  
 }
 
-/* ヘッダー */
+
 
 header {
  background: #ffffff;
@@ -53,7 +53,7 @@ nav a {
  font-size: 14px;
 }
 
-/* メインビジュアル */
+
 
 .hero {
  min-height: 600px;
@@ -117,7 +117,7 @@ background:
  background: #304b36;
 }
 
-/* 商品 */
+
 
 .products {
  max-width: 1100px;
@@ -183,7 +183,7 @@ background:
  color: #3e5742;
 }
 
-/* 3D */
+
 
 .three-d {
  background: #e2eadf;
@@ -200,7 +200,7 @@ background:
  line-height: 2;
 }
 
-/* コンセプト */
+
 
 .concept {
  max-width: 800px;
@@ -218,7 +218,7 @@ background:
  color: #667066;
 }
 
-/* フッター */
+
 
 footer {
  background: #304236;
@@ -256,6 +256,303 @@ footer p {
  }
 
 }
+:root {
+ --deep-green: #123c2b;
+ --lime: #d9ff00;
+ --pink: #ff2bb5;
+ --blue: #00a8ff;
+ --cream: #f4f0df;
+}
+
+
+body {
+ margin: 0;
+ color: var(--deep-green);
+ background:
+   radial-gradient(circle at 12% 18%, rgba(255,43,181,.16) 0 2px, transparent 3px),
+   radial-gradient(circle at 85% 22%, rgba(0,168,255,.15) 0 2px, transparent 3px),
+   radial-gradient(circle at 30% 82%, rgba(217,255,0,.18) 0 3px, transparent 4px),
+   linear-gradient(135deg, #f7f3e5 0%, #e4ead8 50%, #f4eadf 100%);
+}
+
+
+header {
+ position: relative;
+ z-index: 10;
+ background: rgba(250,248,239,.94);
+ backdrop-filter: blur(10px);
+ border-bottom: 1px solid rgba(18,60,43,.12);
+}
+
+header h1 {
+ color: var(--deep-green);
+}
+
+
+header h1::first-letter {
+ color: #7bbf32;
+}
+
+
+.hero {
+ position: relative;
+ min-height: 680px;
+ overflow: hidden;
+
+ display: flex;
+ align-items: center;
+ justify-content: center;
+
+ text-align: center;
+ padding: 80px 20px;
+
+ background:
+   radial-gradient(circle at 10% 15%,
+     rgba(255,43,181,.20) 0 3px,
+     transparent 4px),
+
+   radial-gradient(circle at 88% 18%,
+     rgba(0,168,255,.20) 0 4px,
+     transparent 5px),
+
+   radial-gradient(circle at 18% 78%,
+     rgba(217,255,0,.24) 0 5px,
+     transparent 6px),
+
+   radial-gradient(circle at 82% 75%,
+     rgba(255,43,181,.16) 0 3px,
+     transparent 5px),
+
+   linear-gradient(
+     135deg,
+     #f5f1df 0%,
+     #e0ead9 42%,
+     #f5e8df 100%
+   );
+}
+
+.hero::before {
+ content: "";
+ position: absolute;
+ width: 420px;
+ height: 70px;
+
+ left: -80px;
+ top: 120px;
+
+ background: var(--pink);
+
+ transform: rotate(-18deg);
+ opacity: .82;
+
+ filter: blur(.2px);
+ border-radius: 50% 15% 45% 20%;
+}
+
+
+.hero::after {
+ content: "";
+ position: absolute;
+ width: 330px;
+ height: 55px;
+
+ right: -70px;
+ bottom: 150px;
+
+ background: var(--blue);
+
+ transform: rotate(-22deg);
+ opacity: .75;
+
+ border-radius: 20% 60% 15% 45%;
+}
+
+.hero-inner {
+ position: relative;
+ z-index: 3;
+ max-width: 800px;
+}
+
+
+.hero .eyebrow {
+ font-size: 14px;
+ letter-spacing: 7px;
+ font-weight: 600;
+ margin-bottom: 25px;
+}
+
+
+.hero h1 {
+ display: inline-block;
+
+ font-size: clamp(70px, 12vw, 150px);
+ line-height: .85;
+
+ letter-spacing: 8px;
+
+ color: var(--deep-green);
+
+ margin: 0 0 45px;
+
+ font-weight: 800;
+
+ transform: rotate(-2deg);
+
+ text-shadow:
+   5px 5px 0 var(--lime);
+}
+
+
+.hero h1::after {
+ content: "";
+ display: block;
+
+ width: 75%;
+ height: 13px;
+
+ margin: 18px auto 0;
+
+ background: var(--lime);
+
+ border-radius: 50%;
+
+ transform: rotate(-2deg);
+}
+
+
+.catch-copy {
+ font-size: clamp(18px, 3vw, 27px);
+
+ line-height: 2;
+
+ letter-spacing: 2px;
+
+ font-weight: 500;
+
+ margin: 0 auto 30px;
+
+ max-width: 650px;
+}
+
+
+.sub-copy {
+ font-size: 14px;
+
+ line-height: 2;
+
+ letter-spacing: 2px;
+
+ margin-bottom: 40px;
+}
+
+.hero a,
+.hero button {
+ display: inline-block;
+
+ padding: 17px 40px;
+
+ background: var(--lime);
+
+ color: #102c20;
+
+ border-radius: 50px;
+
+ text-decoration: none;
+
+ font-weight: 700;
+
+ letter-spacing: 2px;
+
+ border: 2px solid #102c20;
+
+ box-shadow: 6px 6px 0 var(--pink);
+
+ transition: .2s ease;
+}
+
+.hero a:hover,
+.hero button:hover {
+ transform: translate(3px, 3px);
+
+ box-shadow: 3px 3px 0 var(--pink);
+}
+
+
+.hero-inner::before {
+ content: "PLANTS × ART";
+
+ position: absolute;
+
+ left: -230px;
+ top: 80px;
+
+ font-size: 18px;
+ font-weight: 800;
+
+ letter-spacing: 3px;
+
+ color: var(--pink);
+
+ transform: rotate(-12deg);
+}
+
+.hero-inner::after {
+ content: "3D × LIFE";
+
+ position: absolute;
+
+ right: -190px;
+ bottom: 60px;
+
+ font-size: 18px;
+ font-weight: 800;
+
+ letter-spacing: 3px;
+
+ color: var(--blue);
+
+ transform: rotate(10deg);
+}
+
+@media (max-width: 700px) {
+
+ .hero {
+   min-height: 620px;
+   padding: 60px 20px;
+ }
+
+ .hero h1 {
+   font-size: 72px;
+   letter-spacing: 5px;
+ }
+
+ .catch-copy {
+   font-size: 17px;
+   line-height: 1.9;
+ }
+
+ .hero-inner::before {
+   left: -10px;
+   top: -55px;
+   font-size: 13px;
+ }
+
+ .hero-inner::after {
+   right: -5px;
+   bottom: -45px;
+   font-size: 13px;
+ }
+
+ .hero::before {
+   width: 260px;
+   height: 50px;
+ }
+
+ .hero::after {
+   width: 220px;
+   height: 45px;
+ }
+}
 
 </style>
 
@@ -266,7 +563,7 @@ footer p {
 <header>
 
  <div class="logo">
-   🌿 GREEN HANDMADE
+   🌿 vibrant
  </div>
 
  <nav>
