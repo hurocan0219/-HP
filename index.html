@@ -5,785 +5,987 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>GREEN HANDMADE</title>
+<title>vibrant. | handmade & art</title>
 
 <style>
 
 * {
- box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
+  font-family:
+    "Hiragino Kaku Gothic ProN",
+    "Helvetica Neue",
+    sans-serif;
 
-  font-family: "Hiragino Kaku Gothic ProN", sans-serif;
-
-  color: #334236;
+  color: #123c2b;
 
   background:
-
-     radial-gradient(circle at 10% 20%, rgba(80,110,75,.10) 0 1px, transparent 2px),
- radial-gradient(circle at 85% 30%, rgba(80,110,75,.08) 0 2px, transparent 3px),
- radial-gradient(circle at 30% 85%, rgba(80,110,75,.07) 0 1px, transparent 3px),
- #eee9d9;
- 
+    radial-gradient(circle at 10% 20%, rgba(255,0,170,.15) 0 3px, transparent 4px),
+    radial-gradient(circle at 85% 25%, rgba(0,180,255,.15) 0 3px, transparent 4px),
+    linear-gradient(135deg, #fff5c7, #dff8d9, #ffe5f1);
 }
 
-
+/* =========================
+   HEADER
+========================= */
 
 header {
- background: #ffffff;
- padding: 22px 30px;
- display: flex;
- justify-content: space-between;
- align-items: center;
- border-bottom: 1px solid #dfe5dc;
+  height: 78px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 35px;
+
+  background: rgba(250,248,238,.92);
+
+  backdrop-filter: blur(12px);
+
+  border-bottom: 2px solid #123c2b;
+
+  position: relative;
+  z-index: 20;
 }
 
 .logo {
- font-size: 22px;
- letter-spacing: 3px;
- font-weight: bold;
+  font-size: 25px;
+  font-weight: 800;
+
+  letter-spacing: 3px;
+
+  transform: rotate(-2deg);
+
+  color: #123c2b;
+}
+
+.logo::after {
+  content: "";
+  display: block;
+
+  width: 100%;
+  height: 7px;
+
+  background: #d9ff00;
+
+  margin-top: -5px;
+
+  transform: rotate(-2deg);
+
+  border-radius: 50%;
 }
 
 nav a {
- margin-left: 25px;
- text-decoration: none;
- color: #526252;
- font-size: 14px;
+  margin-left: 25px;
+
+  text-decoration: none;
+
+  color: #123c2b;
+
+  font-size: 13px;
+
+  font-weight: bold;
+
+  letter-spacing: 2px;
 }
 
-
+/* =========================
+   HERO
+========================= */
 
 .hero {
- min-height: 600px;
- display: flex;
- align-items: center;
- justify-content: center;
- text-align: center;
- padding: 60px 20px;
 
-background:
- radial-gradient(circle at 10% 15%, rgba(70,100,65,.12) 0 1px, transparent 2px),
- radial-gradient(circle at 25% 75%, rgba(70,100,65,.08) 0 2px, transparent 3px),
- radial-gradient(circle at 75% 20%, rgba(70,100,65,.10) 0 1px, transparent 3px),
- radial-gradient(circle at 90% 80%, rgba(70,100,65,.07) 0 2px, transparent 3px),
- linear-gradient(135deg, #e8eadc 0%, #dfe8d8 45%, #eee9dc 100%);
+  min-height: 720px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 100px 20px;
+
+  background:
+
+    radial-gradient(
+      circle at 12% 18%,
+      rgba(255,0,170,.22) 0 4px,
+      transparent 5px
+    ),
+
+    radial-gradient(
+      circle at 88% 22%,
+      rgba(0,180,255,.22) 0 5px,
+      transparent 6px
+    ),
+
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(217,255,0,.28) 0 6px,
+      transparent 7px
+    ),
+
+    linear-gradient(
+      135deg,
+      #fff3bd 0%,
+      #dcffd4 35%,
+      #d9f5ff 65%,
+      #ffe1ef 100%
+    );
 }
 
+/* pink paint */
+
+.hero::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 95px;
+
+  left: -130px;
+  top: 120px;
+
+  background: #ff29b8;
+
+  transform: rotate(-17deg);
+
+  opacity: .82;
+
+  border-radius:
+    50% 20% 45% 15%;
+}
+
+/* blue paint */
+
+.hero::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 440px;
+  height: 85px;
+
+  right: -130px;
+  bottom: 130px;
+
+  background: #00bfff;
+
+  transform: rotate(-18deg);
+
+  opacity: .75;
+
+  border-radius:
+    20% 55% 15% 50%;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
 .hero-inner {
- max-width: 700px;
+
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 850px;
 }
 
 .hero-small {
- font-size: 13px;
- letter-spacing: 4px;
- color: #647564;
- margin-bottom: 20px;
+
+  font-size: 13px;
+
+  letter-spacing: 8px;
+
+  font-weight: bold;
+
+  margin-bottom: 35px;
+
+  color: #123c2b;
 }
+
+/* MORI */
 
 .hero h1 {
- font-size: 72px;
- letter-spacing: 12px;
- line-height: 1;
- margin: 0 0 30px;
- color: #304b36;
- font-weight: 500;
+
+  display: inline-block;
+
+  margin: 0;
+
+  font-size: clamp(90px, 17vw, 180px);
+
+  line-height: .8;
+
+  letter-spacing: 8px;
+
+  font-weight: 900;
+
+  color: #123c2b;
+
+  transform: rotate(-3deg);
+
+  text-shadow:
+
+    7px 7px 0 #d9ff00,
+
+    12px 12px 0 rgba(255,43,181,.45);
 }
 
-.hero h2 {
- font-size: 24px;
- font-weight: normal;
- margin-bottom: 20px;
-}
-
-.hero p {
- line-height: 2;
- color: #596459;
-}
-
-.button {
- display: inline-block;
- margin-top: 25px;
- padding: 14px 35px;
- background: #49664d;
- color: white;
- text-decoration: none;
- border-radius: 30px;
- transition: 0.3s;
-}
-
-.button:hover {
- background: #304b36;
-}
-
-
-
-.products {
- max-width: 1100px;
- margin: auto;
- padding: 90px 25px;
-}
-
-.section-title {
- text-align: center;
- margin-bottom: 50px;
-}
-
-.section-title small {
- letter-spacing: 4px;
- color: #7b8c78;
-}
-
-.section-title h2 {
- font-size: 30px;
- margin: 10px 0;
- color: #354c39;
-}
-
-.product-list {
- display: grid;
- grid-template-columns: repeat(3, 1fr);
- gap: 30px;
-}
-
-.product {
- background: white;
- padding: 18px;
- border-radius: 8px;
- box-shadow: 0 8px 25px rgba(50,70,50,0.08);
-}
-
-.product-image {
- height: 280px;
- background: #dfe7dc;
- border-radius: 5px;
-
- display: flex;
- align-items: center;
- justify-content: center;
-
- color: #71806e;
- letter-spacing: 2px;
-}
-
-.product h3 {
- margin: 20px 0 8px;
- font-size: 18px;
-}
-
-.product p {
- color: #707970;
- font-size: 14px;
-}
-
-.price {
- font-size: 18px;
- font-weight: bold;
- color: #3e5742;
-}
-
-
-
-.three-d {
- background: #e2eadf;
- padding: 100px 25px;
- text-align: center;
-}
-
-.three-d h2 {
- font-size: 32px;
- margin-bottom: 20px;
-}
-
-.three-d p {
- line-height: 2;
-}
-
-
-
-.concept {
- max-width: 800px;
- margin: auto;
- padding: 100px 25px;
- text-align: center;
-}
-
-.concept h2 {
- font-size: 30px;
-}
-
-.concept p {
- line-height: 2.2;
- color: #667066;
-}
-
-
-
-footer {
- background: #304236;
- color: white;
- text-align: center;
- padding: 40px 20px;
-}
-
-footer p {
- font-size: 13px;
- letter-spacing: 2px;
-}
-
-@media (max-width: 700px) {
-
- header {
-   display: block;
-   text-align: center;
- }
-
- nav {
-   margin-top: 15px;
- }
-
- nav a {
-   margin: 0 8px;
- }
-
- .hero h1 {
-   font-size: 38px;
- }
-
- .product-list {
-   grid-template-columns: 1fr;
- }
-
-}
-:root {
- --deep-green: #123c2b;
- --lime: #d9ff00;
- --pink: #ff2bb5;
- --blue: #00a8ff;
- --cream: #f4f0df;
-}
-
-
-body {
- margin: 0;
- color: var(--deep-green);
- background:
-   radial-gradient(circle at 12% 18%, rgba(255,43,181,.16) 0 2px, transparent 3px),
-   radial-gradient(circle at 85% 22%, rgba(0,168,255,.15) 0 2px, transparent 3px),
-   radial-gradient(circle at 30% 82%, rgba(217,255,0,.18) 0 3px, transparent 4px),
-   linear-gradient(135deg, #f7f3e5 0%, #e4ead8 50%, #f4eadf 100%);
-}
-
-
-header {
- position: relative;
- z-index: 10;
- background: rgba(250,248,239,.94);
- backdrop-filter: blur(10px);
- border-bottom: 1px solid rgba(18,60,43,.12);
-}
-
-header h1 {
- color: var(--deep-green);
-}
-
-
-header h1::first-letter {
- color: #7bbf32;
-}
-
-
-.hero {
- position: relative;
- min-height: 680px;
- overflow: hidden;
-
- display: flex;
- align-items: center;
- justify-content: center;
-
- text-align: center;
- padding: 80px 20px;
-
- background:
-   radial-gradient(circle at 10% 15%,
-     rgba(255,43,181,.20) 0 3px,
-     transparent 4px),
-
-   radial-gradient(circle at 88% 18%,
-     rgba(0,168,255,.20) 0 4px,
-     transparent 5px),
-
-   radial-gradient(circle at 18% 78%,
-     rgba(217,255,0,.24) 0 5px,
-     transparent 6px),
-
-   radial-gradient(circle at 82% 75%,
-     rgba(255,43,181,.16) 0 3px,
-     transparent 5px),
-
-   linear-gradient(
-     135deg,
-     #f5f1df 0%,
-     #e0ead9 42%,
-     #f5e8df 100%
-   );
-}
-
-.hero::before {
- content: "";
- position: absolute;
- width: 420px;
- height: 70px;
-
- left: -80px;
- top: 120px;
-
- background: var(--pink);
-
- transform: rotate(-18deg);
- opacity: .82;
-
- filter: blur(.2px);
- border-radius: 50% 15% 45% 20%;
-}
-
-
-.hero::after {
- content: "";
- position: absolute;
- width: 330px;
- height: 55px;
-
- right: -70px;
- bottom: 150px;
-
- background: var(--blue);
-
- transform: rotate(-22deg);
- opacity: .75;
-
- border-radius: 20% 60% 15% 45%;
-}
-
-.hero-inner {
- position: relative;
- z-index: 3;
- max-width: 800px;
-}
-
-
-.hero .eyebrow {
- font-size: 14px;
- letter-spacing: 7px;
- font-weight: 600;
- margin-bottom: 25px;
-}
-
-
-.hero h1 {
- display: inline-block;
-
- font-size: clamp(70px, 12vw, 150px);
- line-height: .85;
-
- letter-spacing: 8px;
-
- color: var(--deep-green);
-
- margin: 0 0 45px;
-
- font-weight: 800;
-
- transform: rotate(-2deg);
-
- text-shadow:
-   5px 5px 0 var(--lime);
-}
-
+/* underline */
 
 .hero h1::after {
- content: "";
- display: block;
 
- width: 75%;
- height: 13px;
+  content: "";
 
- margin: 18px auto 0;
+  display: block;
 
- background: var(--lime);
+  width: 72%;
 
- border-radius: 50%;
+  height: 15px;
 
- transform: rotate(-2deg);
+  margin: 25px auto 0;
+
+  background: #d9ff00;
+
+  border-radius: 50%;
+
+  transform: rotate(-2deg);
 }
 
+/* catch copy */
 
 .catch-copy {
- font-size: clamp(18px, 3vw, 27px);
 
- line-height: 2;
+  margin: 55px auto 25px;
 
- letter-spacing: 2px;
+  max-width: 650px;
 
- font-weight: 500;
+  font-size: clamp(18px, 3vw, 28px);
 
- margin: 0 auto 30px;
+  line-height: 1.8;
 
- max-width: 650px;
+  letter-spacing: 2px;
+
+  font-weight: 600;
 }
-
 
 .sub-copy {
- font-size: 14px;
 
- line-height: 2;
+  font-size: 14px;
 
- letter-spacing: 2px;
+  line-height: 2;
 
- margin-bottom: 40px;
+  letter-spacing: 2px;
+
+  margin-bottom: 40px;
 }
 
-.hero a,
-.hero button {
- display: inline-block;
-
- padding: 17px 40px;
-
- background: var(--lime);
-
- color: #102c20;
-
- border-radius: 50px;
-
- text-decoration: none;
-
- font-weight: 700;
-
- letter-spacing: 2px;
-
- border: 2px solid #102c20;
-
- box-shadow: 6px 6px 0 var(--pink);
-
- transition: .2s ease;
-}
-
-.hero a:hover,
-.hero button:hover {
- transform: translate(3px, 3px);
-
- box-shadow: 3px 3px 0 var(--pink);
-}
-
+/* side words */
 
 .hero-inner::before {
- content: "PLANTS × ART";
 
- position: absolute;
+  content: "vibrant";
 
- left: -230px;
- top: 80px;
+  position: absolute;
 
- font-size: 18px;
- font-weight: 800;
+  left: -240px;
+  top: 40px;
 
- letter-spacing: 3px;
+  font-size: 23px;
 
- color: var(--pink);
+  font-weight: 900;
 
- transform: rotate(-12deg);
+  color: #ff29b8;
+
+  transform: rotate(-12deg);
+
+  letter-spacing: 4px;
 }
 
 .hero-inner::after {
- content: "3D × LIFE";
 
- position: absolute;
+  content: "HANDMADE / ART / LIFE";
 
- right: -190px;
- bottom: 60px;
+  position: absolute;
 
- font-size: 18px;
- font-weight: 800;
+  right: -300px;
+  bottom: 40px;
 
- letter-spacing: 3px;
+  font-size: 14px;
 
- color: var(--blue);
+  font-weight: 800;
 
- transform: rotate(10deg);
+  color: #008bc2;
+
+  transform: rotate(8deg);
+
+  letter-spacing: 3px;
 }
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+
+  display: inline-block;
+
+  padding: 17px 42px;
+
+  background: #d9ff00;
+
+  color: #123c2b;
+
+  border: 2px solid #123c2b;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  font-weight: 800;
+
+  letter-spacing: 2px;
+
+  box-shadow:
+    7px 7px 0 #ff29b8;
+
+  transition: .2s;
+}
+
+.button:hover {
+
+  transform:
+    translate(4px,4px);
+
+  box-shadow:
+    3px 3px 0 #ff29b8;
+}
+
+/* =========================
+   PRODUCTS
+========================= */
+
+.products {
+
+  max-width: 1150px;
+
+  margin: auto;
+
+  padding: 110px 25px;
+}
+
+.section-title {
+
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.section-title small {
+
+  font-size: 12px;
+
+  letter-spacing: 6px;
+
+  color: #ff29b8;
+
+  font-weight: bold;
+}
+
+.section-title h2 {
+
+  font-size: 38px;
+
+  margin: 15px 0;
+
+  letter-spacing: 4px;
+}
+
+.product-list {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 35px;
+}
+
+.product {
+
+  background: rgba(255,255,255,.78);
+
+  padding: 20px;
+
+  border:
+    2px solid #123c2b;
+
+  box-shadow:
+    8px 8px 0 #d9ff00;
+
+  transition: .2s;
+}
+
+.product:nth-child(2) {
+
+  box-shadow:
+    8px 8px 0 #ff29b8;
+}
+
+.product:nth-child(3) {
+
+  box-shadow:
+    8px 8px 0 #00bfff;
+}
+
+.product:hover {
+
+  transform:
+    translateY(-6px);
+}
+
+.product-image {
+
+  height: 280px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e4ffd9,
+      #fff2a8
+    );
+
+  color: #607060;
+
+  letter-spacing: 3px;
+
+  font-size: 12px;
+}
+
+.product h3 {
+
+  font-size: 19px;
+
+  margin:
+    22px 0 10px;
+}
+
+.product p {
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  color: #5d695f;
+}
+
+.price {
+
+  font-size: 19px;
+
+  font-weight: bold;
+
+  margin:
+    18px 0;
+}
+
+/* =========================
+   3D
+========================= */
+
+.three-d {
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 120px 25px;
+
+  text-align: center;
+
+  background:
+
+    linear-gradient(
+      135deg,
+      #123c2b,
+      #18583d
+    );
+
+  color: white;
+}
+
+.three-d::before {
+
+  content: "3D";
+
+  position: absolute;
+
+  font-size: 300px;
+
+  font-weight: 900;
+
+  color: #d9ff00;
+
+  opacity: .08;
+
+  right: -30px;
+
+  top: -80px;
+}
+
+.three-d h2 {
+
+  font-size: 45px;
+
+  letter-spacing: 8px;
+
+  margin-bottom: 25px;
+}
+
+.three-d p {
+
+  line-height: 2;
+
+  margin-bottom: 40px;
+}
+
+.three-d .button {
+
+  background: #ff29b8;
+
+  color: white;
+
+  border-color: white;
+
+  box-shadow:
+    7px 7px 0 #d9ff00;
+}
+
+/* =========================
+   CONCEPT
+========================= */
+
+.concept {
+
+  max-width: 850px;
+
+  margin: auto;
+
+  padding: 120px 25px;
+
+  text-align: center;
+}
+
+.concept h2 {
+
+  font-size: 42px;
+
+  letter-spacing: 6px;
+}
+
+.concept p {
+
+  font-size: 16px;
+
+  line-height: 2.4;
+
+  color: #59655c;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+  background: #d9ff00;
+
+  color: #123c2b;
+
+  text-align: center;
+
+  padding: 45px 20px;
+
+  border-top:
+    2px solid #123c2b;
+}
+
+footer p {
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 700px) {
 
- .hero {
-   min-height: 620px;
-   padding: 60px 20px;
- }
+  header {
 
- .hero h1 {
-   font-size: 72px;
-   letter-spacing: 5px;
- }
+    height: auto;
 
- .catch-copy {
-   font-size: 17px;
-   line-height: 1.9;
- }
+    padding:
+      18px 20px;
 
- .hero-inner::before {
-   left: -10px;
-   top: -55px;
-   font-size: 13px;
- }
+    display: block;
 
- .hero-inner::after {
-   right: -5px;
-   bottom: -45px;
-   font-size: 13px;
- }
+    text-align: center;
+  }
 
- .hero::before {
-   width: 260px;
-   height: 50px;
- }
+  nav {
 
- .hero::after {
-   width: 220px;
-   height: 45px;
- }
+    margin-top: 15px;
+  }
+
+  nav a {
+
+    margin:
+      0 7px;
+
+    font-size: 11px;
+  }
+
+  .hero {
+
+    min-height: 690px;
+
+    padding:
+      70px 20px;
+  }
+
+  .hero h1 {
+
+    font-size: 82px;
+
+    letter-spacing: 3px;
+  }
+
+  .hero-small {
+
+    letter-spacing: 4px;
+
+    font-size: 11px;
+  }
+
+  .catch-copy {
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    margin-top: 50px;
+  }
+
+  .hero-inner::before {
+
+    left: -5px;
+
+    top: -55px;
+
+    font-size: 17px;
+  }
+
+  .hero-inner::after {
+
+    right: -5px;
+
+    bottom: -55px;
+
+    font-size: 10px;
+  }
+
+  .hero::before {
+
+    width: 280px;
+
+    height: 55px;
+  }
+
+  .hero::after {
+
+    width: 240px;
+
+    height: 50px;
+  }
+
+  .product-list {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .products {
+
+    padding:
+      80px 20px;
+  }
+
+  .three-d {
+
+    padding:
+      90px 20px;
+  }
+
+  .three-d h2 {
+
+    font-size: 35px;
+  }
+
+  .concept {
+
+    padding:
+      90px 20px;
+  }
+
 }
-/* ===== 最終デザイン ===== */
 
-.hero {
-background:
-  radial-gradient(circle at 15% 20%, rgba(255,0,170,.35) 0 5px, transparent 6px),
-  radial-gradient(circle at 85% 25%, rgba(0,180,255,.30) 0 5px, transparent 6px),
-  radial-gradient(circle at 20% 80%, rgba(220,255,0,.35) 0 7px, transparent 8px),
-  radial-gradient(circle at 80% 75%, rgba(255,0,170,.25) 0 6px, transparent 7px),
-  linear-gradient(
-    120deg,
-    #fff4c7 0%,
-    #d9ffd0 30%,
-    #d7f7ff 55%,
-    #ffe0f2 80%,
-    #f4ffb0 100%
-  );
-}
-
-/* ネオンの大きなペイント */
-.hero::before {
-content: "";
-position: absolute;
-
-width: 500px;
-height: 90px;
-
-left: -120px;
-top: 130px;
-
-background: #ff29b8;
-
-transform: rotate(-17deg);
-
-opacity: .75;
-
-border-radius: 50%;
-}
-
-/* ブルーのペイント */
-.hero::after {
-content: "";
-position: absolute;
-
-width: 420px;
-height: 80px;
-
-right: -120px;
-bottom: 130px;
-
-background: #00bfff;
-
-transform: rotate(-15deg);
-
-opacity: .70;
-
-border-radius: 50%;
-}
 </style>
-
 </head>
 
 <body>
 
 <header>
 
- <div class="logo">
-   🌿 vibrant
- </div>
+  <div class="logo">
+    vibrant
+  </div>
 
- <nav>
-   <a href="#products">作品</a>
-   <a href="#3d">3D</a>
-   <a href="#concept">コンセプト</a>
- </nav>
+  <nav>
+
+    <a href="#products">作品</a>
+
+    <a href="#3d">3D</a>
+
+    <a href="#concept">ABOUT</a>
+
+  </nav>
 
 </header>
 
 
 <section class="hero">
 
- <div class="hero-inner">
+  <div class="hero-inner">
 
-   <div class="hero-small">
-     VIBRANT × HANDMADE × 3D
-   </div>
+    <div class="hero-small">
+      VIBRANT × HANDMADE × 3D
+    </div>
 
-   <h1>MORI.</h1>
+    <h1>
+      MORI.
+    </h1>
 
-   <p class="catch-copy">
- 植物を置いた。<br>
- 部屋がちょっと偉そうになった。<br><br>
+    <p class="catch-copy">
 
- だから今度は、作品を置いてみる。<br>
- 暮らしは、もう少し遊んでいい。
-</p>
+      植物を置いた。<br>
 
-  <p class="sub-copy">
- ちゃんと作っています。<br>
- でも、ちゃんとしすぎないようにしています。
-</p>
-   <a href="#products" class="button">
-     作品を見る
-   </a>
+      部屋がちょっと<br>
+      偉そうになった。<br><br>
 
- </div>
+      だから今度は、<br>
+      作品を置いてみる。
+
+    </p>
+
+    <p class="sub-copy">
+
+      暮らしは、もう少し遊んでいい。
+
+    </p>
+
+    <a href="#products" class="button">
+
+      作品を見る →
+
+    </a>
+
+  </div>
 
 </section>
 
 
 <section class="products" id="products">
 
- <div class="section-title">
+  <div class="section-title">
 
-   <small>HANDMADE COLLECTION</small>
+    <small>
+      HANDMADE COLLECTION
+    </small>
 
-   <h2>作品一覧</h2>
+    <h2>
+      作品一覧
+    </h2>
 
- </div>
-
-
- <div class="product-list">
-
-
-   <div class="product">
-
-     <div class="product-image">
-       PRODUCT IMAGE
-     </div>
-
-     <h3>Handmade Item 01</h3>
-
-     <p>
-       植物のとなりにちょっと変なものを。
-     </p>
-
-     <div class="price">
-       ¥5,000
-     </div>
-
-     <a href="#" class="button">
-       3Dで見る
-     </a>
-
-   </div>
+  </div>
 
 
-   <div class="product">
-
-     <div class="product-image">
-       PRODUCT IMAGE
-     </div>
-
-     <h3>Handmade Item 02</h3>
-
-     <p>
-       植物のある暮らしを彩る作品。
-     </p>
-
-     <div class="price">
-       ¥6,000
-     </div>
-
-     <a href="#" class="button">
-       3Dで見る
-     </a>
-
-   </div>
+  <div class="product-list">
 
 
-   <div class="product">
+    <div class="product">
 
-     <div class="product-image">
-       PRODUCT IMAGE
-     </div>
+      <div class="product-image">
+        PRODUCT IMAGE
+      </div>
 
-     <h3>Handmade Item 03</h3>
+      <h3>
+        Handmade Item 01
+      </h3>
 
-     <p>
-       丁寧に制作したオリジナル作品。
-     </p>
+      <p>
+        植物のとなりに、
+        ちょっと変なものを。
+      </p>
 
-     <div class="price">
-       ¥7,000
-     </div>
+      <div class="price">
+        ¥5,000
+      </div>
 
-     <a href="#" class="button">
-       3Dで見る
-     </a>
+      <a href="#" class="button">
+        3Dで見る
+      </a>
 
-   </div>
+    </div>
 
 
- </div>
+    <div class="product">
+
+      <div class="product-image">
+        PRODUCT IMAGE
+      </div>
+
+      <h3>
+        Handmade Item 02
+      </h3>
+
+      <p>
+        暮らしに色を足す、
+        小さなハンドメイド。
+      </p>
+
+      <div class="price">
+        ¥6,000
+      </div>
+
+      <a href="#" class="button">
+        3Dで見る
+      </a>
+
+    </div>
+
+
+    <div class="product">
+
+      <div class="product-image">
+        PRODUCT IMAGE
+      </div>
+
+      <h3>
+        Handmade Item 03
+      </h3>
+
+      <p>
+        丁寧だけど、
+        ちょっと自由な作品。
+      </p>
+
+      <div class="price">
+        ¥7,000
+      </div>
+
+      <a href="#" class="button">
+        3Dで見る
+      </a>
+
+    </div>
+
+
+  </div>
 
 </section>
 
 
 <section class="three-d" id="3d">
 
- <h2>3D VIEW</h2>
+  <h2>
+    3D VIEW
+  </h2>
 
- <p>
-   写真だけでは伝わらない作品の魅力を、<br>
-   360°から楽しめるショップを目指しています。
- </p>
+  <p>
 
- <a href="#" class="button">
-   3Dギャラリー
- </a>
+    写真だけでは伝わらない。<br>
+
+    だから、ぐるっと見せる。
+
+  </p>
+
+  <a href="#" class="button">
+
+    3D GALLERY →
+
+  </a>
 
 </section>
 
 
 <section class="concept" id="concept">
 
- <h2>GREEN LIFE</h2>
+  <h2>
+    VIBRANT LIFE
+  </h2>
 
- <p>
-   植物を育てるように、作品を大切にする。<br>
-   自然を感じる暮らしの中に、<br>
-   ハンドメイドという小さな彩りを。
- </p>
+  <p>
+
+    植物のとなりに、作品を。<br>
+
+    作品のとなりに、ちょっと変なものを。<br><br>
+
+    原宿みたいに自由で、<br>
+
+    代官山みたいに丁寧に。<br><br>
+
+    暮らしは、もう少し遊んでいい。
+
+  </p>
 
 </section>
 
 
 <footer>
 
- <p>GREEN HANDMADE</p>
+  <p>
+    vibrant.
+  </p>
 
- <p>© 2026 GREEN HANDMADE</p>
+  <p>
+    © 2026 vibrant.
+  </p>
 
 </footer>
 
